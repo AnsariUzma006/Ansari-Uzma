@@ -1,0 +1,29 @@
+// Name : Ansari Uzma Rehmatullah      Div : E          
+UIN: 241S064 
+#include <stdio.h> 
+// Function to count how many times it is called 
+void counter() { 
+static int count = 0;  // Static variable to retain its value across function calls 
+count++;                      
+// Increment the counter each time the function is called 
+printf("The function has been called %d times.\n", count); 
+} 
+  int main() { 
+  // Calling the counter function multiple times 
+  counter();  // First call 
+  counter();  // Second call 
+  counter();  // Third call 
+  counter();  // Fourth call 
+ counter(); //Fifth call 
+  counter(); //Sixth call 
+  return 0; 
+  } 
+
+  /*   OUTPUT 
+  The function has been called 1 times. 
+  The function has been called 2 times. 
+  The function has been called 3 times. 
+  The function has been called 4 times. 
+ The function has been called 5 times. 
+  The function has been called 6 times.               
+*/ 
