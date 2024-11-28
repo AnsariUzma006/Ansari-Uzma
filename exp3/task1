@@ -1,0 +1,66 @@
+ 1.  //  Name  :Ansari Uzma Rehmatullah            Div :E  UIN :241S064 
+ 2.  // Title : Calculator 
+ 3.  #include <stdio.h> 
+ 4.  int main() { 
+ 5.  int choice; 
+ 6.  float num1, num2, result; 
+ 7.  start: 
+ 8.  // Display menu 
+ 9.  printf("\n--- Menu Driven Calculator ---\n"); 
+ 10.  printf("1. Addition\n"); 
+ 11.  printf("2. Subtraction\n"); 
+ 12.  printf("3. Multiplication\n"); 
+ 13.  printf("4. Division\n"); 
+ 14.  printf("5. Exit\n"); 
+ 15.  printf("Enter your choice (1-5): "); 
+ 16.  scanf("%d", &choice); 
+ 17.  if (choice == 5) { 
+ 18.  printf("Exiting the program. Goodbye!\n"); 
+ 19.  return 0; 
+ 20.  } 
+ 21.  // Take input for operations 
+ 22.  if (choice >= 1 && choice <= 4) { 
+ 23.  printf("Enter two numbers: "); 
+ 24.  scanf("%f %f", &num1, &num2); 
+ 25.  } 
+ 26.  // Perform the operation using switch 
+ 27.  switch (choice) { 
+ 28.  case 1: 
+ 29.  result = num1 + num2; 
+ 30.  printf("Result: %.2f + %.2f = %.2f\n", num1, num2, result); 
+ 31.  break; 
+ 32.  case 2: 
+ 33.  result = num1 - num2; 
+ 34.  printf("Result: %.2f - %.2f = %.2f\n", num1, num2, result); 
+ 35.  break; 
+ 36.  case 3: 
+ 37.  result = num1 * num2; 
+ 38.  printf("Result: %.2f * %.2f = %.2f\n", num1, num2, result); 
+ 39.  break; 
+ 40.  case 4: 
+ 41.  if (num2 != 0) { 
+ 42.  result = num1 / num2; 
+ 43.  printf("Result: %.2f / %.2f = %.2f\n", num1, num2, result); 
+ 44.  } else { 
+ 45.  printf("Error: Division by zero is not allowed.\n"); 
+ 46.  } 
+ 47.  break; 
+ 48.  default: 
+ 49.  printf("Invalid choice! Please try again.\n"); 
+ 50.  break; 
+ 51.  } 
+ 52.  // Go back to the menu 
+ 53.  goto start; 
+ 54.  return 0; 
+ 55.  } 
+ 56.  /* OUTPUT 
+ 57.  --- Menu Driven Calculator --- 
+ 58.  Addition 
+ 59.  Subtraction 
+ 60.  Multiplication 
+ 61.  Division 
+ 62.  Exit 
+ 63.  Enter your choice (1-5): 4 
+ 64.  Enter two numbers: 36 
+ 65.  42 
+ 66.  Result: 36.00 / 42.00 = 0.86  */
