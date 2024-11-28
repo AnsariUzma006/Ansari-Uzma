@@ -1,0 +1,31 @@
+ // Name: Ansari Uzma Rehmatullah Div: E UIN: 241S064
+ #include <stdio.h>
+ int Prime(int n) {
+ if (n < 2) {
+ return 0;
+ }
+ for (int i = 2; i * i <= n; i++) {
+ if (n % i == 0) {
+ return 0;
+ }
+ }
+ return 1;
+ }
+ int main() {
+ int start, end;
+ // Input the range
+printf("Enter your numbers(start and end):” );
+ scanf("%d %d", &start, &end);
+ // Print all primes between start and end
+ printf("Prime numbers between %d and %d are:\n", start, end); for (int num = start; num <= end; num++) {
+ for (int num = start; num <= end; num++) {
+ if (Prime(num)) {
+printf("%d ", num);
+ }
+ }
+ printf("\n");
+ return 0;
+ }
+ /* OUTPUT
+ Enter your numbers (start and end): 10 50
+ Prime numbers between 10 and 50 are: 11 13 17 19 23 29 31 37 41 43 47
