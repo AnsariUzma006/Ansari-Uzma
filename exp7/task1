@@ -1,0 +1,32 @@
+//  Name: Ansari Uzma Rehmatullah           
+#include <stdio.h> 
+int findLargest(int arr[], int size) { 
+int largest = arr[0];  // Assume the first element is the largest initially 
+for (int i = 1; i < size; i++) { 
+if (arr[i] > largest) { 
+largest = arr[i];  // Update largest if the current element is greater 
+} 
+} 
+ return largest; 
+  } 
+  int main() {
+  int n; 
+  // Get the size of the array from the user 
+  printf("Enter the number of elements in the array: "); 
+  scanf("%d", &n); 
+  int arr[n];  // Declare an array of size n 
+  // Get the array elements from the user 
+  printf("Enter %d elements:\n", n); 
+  for (int i = 0; i < n; i++) { 
+  scanf("%d", &arr[i]); 
+  } 
+ // Find and print the largest element 
+  int largest = findLargest(arr, n); 
+  printf("The largest element in the array is: %d\n", largest); 
+  return 0; 
+  } 
+ 
+  /* OUTPUT 
+  Enter the number of elements in the array: 5 
+    Enter 5 elements: 12 34 56 78 23 
+  The largest element in the array is: 78    */ 
